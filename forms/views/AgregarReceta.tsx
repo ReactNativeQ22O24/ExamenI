@@ -31,7 +31,6 @@ export default function agregarReceta() {
         <View style={styles.viewBoton}>
             <Button title="AGREGAR RECETA" color={'#E5AB45'}/>
         </View>
-        
     </View>
   )
 }
