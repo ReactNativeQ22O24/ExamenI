@@ -11,9 +11,9 @@ const Tab = createBottomTabNavigator();
 export default function App() {
   return (
     <NavigationContainer>
-      <Tab.Navigator>
-        <Tab.Screen name="Agregar Receta" component={agregarReceta} options={{tabBarIcon: (props)=>(<Ionicons name="add-circle-outline" size={24} color="green" />) }}/>
-        <Tab.Screen name="Listar Recetas" component={listarReceta} options={{tabBarIcon: (props)=>(<Ionicons name="fast-food-outline" size={24} color="green" />) }}/>
+      <Tab.Navigator >
+        <Tab.Screen name="Agregar Receta" component={agregarReceta} options={{tabBarIcon: (props)=>(<Ionicons name="add-circle-outline" size={24} color="green" />), headerShown:false}}/>
+        <Tab.Screen name="Listar Recetas" component={listarReceta} options={{tabBarIcon: (props)=>(<Ionicons name="fast-food-outline" size={24} color="green" />), headerShown:false}}/>
       </Tab.Navigator>
     </NavigationContainer>
   );

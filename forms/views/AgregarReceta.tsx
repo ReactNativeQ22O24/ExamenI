@@ -3,13 +3,16 @@ import React from 'react'
 import styles from '../style/agregarRecetaCSS'
 
 
-export default function agregarReceta() {
+export default function agregarReceta() {    
+    const [nombreReceta, setNombreReceta]=React.useState("");
+    const[ingredientes, setIngredientes]=React.useState("");
+
   return (
     <View style={styles.container}>
         <Image style={styles.logo} source={require('../assets/logo.png')}/>
         <View style={styles.divInpust}>
-            <TextInput style={styles.entradaTexto} placeholder='Nombre Receta'/>
-            <TextInput style={styles.entradaTexto} placeholder='Ingredientes'/>
+            <TextInput style={styles.entradaTexto} placeholder='Nombre Receta' onChangeText={setNombreReceta}/>
+            <TextInput style={styles.entradaTexto} placeholder='Ingredientes' onChangeText={setIngredientes}/>
         </View>
         
         <Text style={styles.h2}>Detalle Receta Agregada</Text> 
@@ -20,8 +23,8 @@ export default function agregarReceta() {
                 <Text style={styles.h2_texto}>Detalles Ingredientes</Text>
             </View>
             <View style={styles.encabezadoTI}>
-                <Text style={styles.h3_texto} ></Text>
-                <Text style={styles.h3_texto}></Text>
+                <Text style={styles.h3_texto}>{nombreReceta}</Text>
+                <Text style={styles.h3_texto}>{ingredientes}</Text>
             </View>
             
         </View>
