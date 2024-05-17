@@ -5,6 +5,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import agregarReceta from './views/AgregarReceta.tsx';
 import listarReceta from './views/ListarReceta.tsx';
 import Ionicons from '@expo/vector-icons/Ionicons';
+import Creditos from './views/Creditos.tsx';
 
 const Tab = createBottomTabNavigator();
 
@@ -12,6 +13,7 @@ export default function App() {
   return (
     <NavigationContainer>
       <Tab.Navigator >
+        <Tab.Screen name="Creditos" component={Creditos} options={{tabBarIcon: (props)=>(<Ionicons name="logo-github" size={24} color="green" />), headerShown:false}}/>
         <Tab.Screen name="Agregar Receta" component={agregarReceta} options={{tabBarIcon: (props)=>(<Ionicons name="add-circle-outline" size={24} color="green" />), headerShown:false}}/>
         <Tab.Screen name="Listar Recetas" component={listarReceta} options={{tabBarIcon: (props)=>(<Ionicons name="fast-food-outline" size={24} color="green" />), headerShown:false}}/>
       </Tab.Navigator>
