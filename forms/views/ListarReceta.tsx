@@ -62,7 +62,7 @@ const App = () => {
   const renderItem = ({item}: {item: ItemData}) => {
     const backgroundColor = item.id == selectedId ? '#50724a' : '#FFD48E';
     const color = item.id == selectedId ? 'white' : 'black';
-
+    
     return (
       <Item
         item={item}
@@ -73,7 +73,7 @@ const App = () => {
     );
   };
 
-
+  console.log(DATA);
   return (
     <View style={styles.container}>
       <Image style={styles.logo} source={require('../assets/logo.png')}/>
@@ -92,8 +92,9 @@ const App = () => {
         <Button title="BUSCAR" color={'#E5AB45'}/>
       </View>
     </View>
-    
+   
   )
+ 
 }
 
 export default App;
